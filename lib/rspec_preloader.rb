@@ -25,9 +25,13 @@ class RspecPreloader
 
   private
 
+  def self.root_folder
+    Dir.pwd
+  end
+
   def load_spec_helper
     print "Loading spec_helper..."
-    require "#{Dir.pwd}/spec/spec_helper"
+    require "#{self.class.root_folder}/spec/spec_helper"
     puts "done."
   end
 
