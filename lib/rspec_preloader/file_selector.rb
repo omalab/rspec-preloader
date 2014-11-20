@@ -54,7 +54,7 @@ class FileSelector
   end
 
   def watched_folders
-    folders = [RspecPreloader.root_folder]
+    folders = []
     File.readlines(config_file_path).each do |line|
       line = line.strip
       if File.exists? File.expand_path(line)
@@ -64,6 +64,9 @@ class FileSelector
         puts "#{config_file_path} defines #{File.expand_path(line)} which does not exist!"
       end
     end if File.exists? "#{RspecPreloader.root_folder}/.rspec_preloader"
+
+    # root folder is last
+    folders << RspecPreloader.root_folder
     folders
   end
 end
