@@ -20,6 +20,16 @@ Or in your Gemfile
   gem 'rspec-preloader'
 ```
 
+Watched folders (git repositories)
+---
+Is your project spread across multiple folders?
+By default the only watched folder is the one where you start the preloader, but there is a way.
+Create a .rspec_preloader set relative paths to the other folders.
+```
+../local_gem_installation
+../some_other_git_folder
+```
+
 
 Prereqs
 ---
