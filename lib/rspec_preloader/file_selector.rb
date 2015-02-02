@@ -1,6 +1,6 @@
 require 'pry'
 class FileSelector
-  GIT_STATUSES_TO_RELOAD = ['M', 'MM', 'A', '??']
+  GIT_STATUSES_TO_RELOAD = ['M', 'MM', 'A', 'AM', '??']
   IN_FOLDER_MATCHERS = [
     /^app\/.*\.rb$/,
     /^lib\/.*\.rb$/,
