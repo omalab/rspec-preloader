@@ -5,6 +5,7 @@ class FileSelector
     /^app\/.*\.rb$/,
     /^lib\/.*\.rb$/,
     /^spec\/support\/.*\.rb$/,
+    /^config\/routes.rb$/
   ]
 
   def self.updated_source_files
